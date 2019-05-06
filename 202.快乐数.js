@@ -15,7 +15,6 @@ var isHappy = function(n) {
     return false;
   }
   let arr = n.toString().split('');
-  console.log(arr);
   const value = arr.reduce((pre, item) => {
     return pre + item * item;
   }, 0);
