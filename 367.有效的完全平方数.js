@@ -24,10 +24,10 @@ var isPerfectSquare = function(num) {
     if (n * n > num) {
       // 说明这个值大了
       m = n;
-      n = parseInt((n - i) / 2);
+      n = parseInt((i + m) / 2);
     } else {
       i = n;
-      n = parseInt((n + m) / 2);
+      n = parseInt((i + m) / 2);
     }
   }
 };
