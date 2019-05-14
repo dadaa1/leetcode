@@ -32,3 +32,19 @@ var removeElements = function(head, val) {
     };
   }, null);
 };
+removeElements = function(head, val) {
+  let obj = head;
+  while (obj) {
+    if (obj.val === val) {
+      if (obj.next) {
+        obj.next = obj.next.next;
+        obj = obj.next;
+      } else {
+        obj = null;
+      }
+    } else {
+      obj = obj.next;
+    }
+  }
+  return head;
+};
