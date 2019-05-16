@@ -9,11 +9,20 @@
  */
 var lengthOfLongestSubstring = function(s) {
   if (s.length < 2) {
-    return 1;
+    return s.length;
   }
-  let start = 0;
-  let end = 2;
-  for (end; end < s.length; end++) {
-    for (start; start < end; start++) {}
+  const map = { length: 0 };
+  // let start = 0;
+  // let end = 0;
+  let max = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (!map[s[i]]) {
+      map[s[i]] = 1;
+      map['length']++;
+      if (max < map['length']) {
+        max = map['length'];
+      }
+    }
   }
+  return max;
 };
