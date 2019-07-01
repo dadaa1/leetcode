@@ -21,3 +21,4 @@ console.log(a());
 
 // testhelloworld
 // test1
+// json
