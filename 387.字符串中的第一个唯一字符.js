@@ -8,15 +8,16 @@
  * @return {number}
  */
 var firstUniqChar = function(s) {
-  let flag = true;
-  for (let i = 0; i < s.length; i++) {
-    flag = true;
-    for (j = i + 1; j < s.length; j++) {
-      if (s[i] === s[j]) {
-        flag = false;
-      }
+  const map = {};
+  [...s].forEach(item => {
+    if (map[item] !== undefined) {
+      map[item] = false;
+      return;
     }
-    if (flag) {
+    map[item] = true;
+  });
+  for (let i = 0; i < s.length; i++) {
+    if (map[s[i]]) {
       return i;
     }
   }
