@@ -7,7 +7,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var rob = function(nums) {
+var rob = function (nums) {
   // const map = {};
   // const dp = nums => {
   //   const len = nums.length;
